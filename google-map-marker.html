@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <title>구글지도 marker</title>
     <style>
         #map {
             width: 600px;
@@ -14,13 +15,13 @@
 <div id="map"></div>
 <script>
     function initMap() {
-        var fixPoisiton = {lat: 37.5203, lng: 127.0313};//위도( Latitude ), 경도( Longitude ) 의 약어
+        var center = {lat: 37.5203, lng: 127.0313};//위도( Latitude ), 경도( Longitude ) 의 약어
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 18,
-            center: fixPoisiton
+            center: center
         });
         var marker = new google.maps.Marker({
-            position: fixPoisiton,
+            position: center,
             map: map
         });
     }
@@ -30,5 +31,3 @@
 </script>
 </body>
 </html>
-
-<!-- AIzaSyDoPm7eEso0yxRQSMB2iSm5rTzyvo5EfxU -->
